@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Race Circuits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+  /* CSS */
+
+/* MOBILE */
+@media only screen and (min-width: 250px){
+  h1{
+    font-size: 50px;
+  }
+  table{
+    overflow: scroll;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 500px){
+  h1{
+    font-size: 50px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 720px){
+  h1{
+    font-size: 10em;
+  }
+}
+  /*  */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+  /* background-color: aliceblue; */
+
+  background-image: -webkit-linear-gradient(  rgba(255, 0, 0, 0.9), rgb(0, 204, 255), rgba(255, 166, 0, 0.9)) ;
+  transition: 2s;
+}
+body:hover{
+  /* background-color: rgb(255, 123, 0); */
+
+  transition: 2s;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+  padding: 20px;
+  transition: 1s;
+}
+.navbar:hover {
+  overflow: hidden;
+  background-color: #0c62c4a8; 
+  padding: 40px;
+  transition: 1s;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* SECOND SECTION */
+.subnav2 {
+  float: right;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.subnav2 .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: 0.5s;
+}
+
+.subnav2 .subnavbtn:hover {
+  color: white;
+  padding: 15px 25px;
+
+  margin: 0;
+  transition: 0.5s;
+}
+
+/*  */
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: orange;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: 0.5s;
+}
+
+.subnav .subnavbtn:hover {
+  color: white;
+  padding: 15px 25px;
+
+  margin: 0;
+  transition: 0.5s;
+}
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(255, 123, 0);
+  border-radius: 2.5px;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(255, 123, 0);
+  border-radius: 2.5px;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+.Biancaimg{
+
+transition: 1s;
+}
+.Biancaimg:hover{
+  opacity: 80%;
+  transition: 1s;
+  padding-top: 20px;
+}
+table{
+  width: 100%;
+  margin: auto;
+}
+
+.table01{
+  position: center;
+  text-align: center;
+  font-weight: bold;
+}
+td{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid rgb(255, 123, 0);
+  border-top: 2.5px solid rgb(231, 175, 123);  
+}
+th{
+  padding-left: 50px;
+  padding-right: 50px;
+  border-bottom: 10px solid rgb(224, 63, 63);
+}
+.table-div{
+  text-align: center;
+  background-image: url("img/Brisbey.jpg");
+  padding: 50px;
+  border-radius: 20px;
+  transition: 2s;
+  overflow-x: auto;
+}
+.table-div:hover{
+  padding: 50px;
+  transition: 2s;
+}
+
+/*  */
+.circuit-head{
+  background-color: rgba(255, 254, 251, 0.70);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+
+.circuit-head:hover{
+  background-color: rgba(255, 254, 251, 0.295);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+
+.circuit1{
+  background-color: rgba(255, 166, 0, 0.75);
+}
+.circuit1:hover{
+  background-color: rgba(255, 166, 0, 0.658);
+}
+.circuit1-head{
+  background-color: rgba(255, 166, 0, 0.80);
+}
+.circuit1-head:hover{
+  background-color: rgba(255, 166, 0, 0.253);
+}
+/*  */
+.circuit2{
+  background-color: rgba(245, 45, 45, 0.75);
+}
+.circuit2:hover{
+  background-color: rgba(255, 0, 0, 0.253);
+}
+.circuit2-head{
+  background-color: rgba(245, 45, 45, 0.80);
+}
+.circuit2-head:hover{
+  background-color: rgba(255, 0, 0, 0.253);
+}
+/*  */
+.circuit3{
+background-color: rgba(45, 245, 202, 0.75);
+}
+.circuit3:hover{
+background-color: rgba(45, 245, 202, 0.253);
+}
+.circuit3-head{
+  background-color: rgba(45, 245, 202, 0.80);
+}
+.circuit3-head:hover{
+  background-color: rgba(45, 245, 202, 0.253);
+}
+/*  */
+.circuit4{
+background-color: rgba(134, 255, 140, 0.75);
+}
+.circuit4:hover{
+background-color: rgba(173, 248, 163, 0.253);
+}
+.circuit4-head{
+  background-color: rgba(134, 255, 140, 0.80);
+}
+.circuit4-head:hover{
+  background-color: rgba(173, 248, 163, 0.253);
+}
+/*  */
+.circuit5{
+background-color: rgba(45, 108, 245, 0.75);
+}
+.circuit5:hover{
+background-color: rgba(45, 138, 245, 0.253);
+}
+.circuit5-head{
+  background-color: rgba(45, 108, 245, 0.80);
+}
+.circuit5-head:hover{
+  background-color: rgba(45, 138, 245, 0.253);
+}
+/*  */
+.circuit6{
+background-color: rgba(198, 45, 245, 0.75);
+}
+.circuit6:hover{
+background-color: rgba(182, 45, 245, 0.253);
+}
+.circuit6-head{
+  background-color: rgba(198, 45, 245, 0.80);
+}
+.circuit6-head:hover{
+  background-color: rgba(182, 45, 245, 0.253);
+}
+/*  */
+.circuit7{
+background-color: rgba(245, 45, 105, 0.75);
+}
+.circuit7:hover{
+background-color: rgba(245, 45, 128, 0.253);
+}
+.circuit7-head{
+  background-color: rgba(245, 45, 105, 0.80);
+}
+.circuit7-head:hover{
+  background-color: rgba(245, 45, 128, 0.253);
+}
+/*  */
+.circuit8{
+background-color: rgba(45, 245, 128, 0.75);
+}
+.circuit8:hover{
+background-color: rgba(45, 245, 162, 0.253);
+}
+.circuit8-head{
+  background-color: rgba(45, 245, 128, 0.80);
+}
+.circuit8-head:hover{
+  background-color: rgba(45, 245, 162, 0.253);
+}
+/*  */
+.circuit9{
+background-color: rgba(45, 58, 245, 0.75);
+}
+.circuit9:hover{
+background-color: rgba(45, 65, 245, 0.453);
+}
+.circuit9-head{
+  background-color: rgba(45, 58, 245, 0.80);
+}
+.circuit9-head:hover{
+  background-color: rgba(45, 65, 245, 0.453);
+}
+/*  */
+.circuit10{
+background-color: rgba(217, 255, 0, 0.75);
+}
+.circuit10:hover{
+background-color: rgba(208, 245, 45, 0.553);
+}
+.circuit10-head{
+  background-color: rgba(217, 255, 0, 0.80);
+}
+.circuit10-head:hover{
+  background-color: rgba(208, 245, 45, 0.553);
+}
+/*  */
+.circuit11{
+background-color: rgba(81, 255, 0, 0.75);
+}
+.circuit11:hover{
+background-color: rgba(78, 245, 45, 0.553);
+}
+.circuit11-head{
+  background-color: rgba(81, 255, 0, 0.80);
+}
+.circuit11-head:hover{
+  background-color: rgba(78, 245, 45, 0.553);
+}
+/*  */
+.circuit12{
+background-color: rgba(150, 112, 106, 0.75);
+}
+.circuit12:hover{
+background-color: rgba(87, 92, 85, 0.553);
+}
+.circuit12-head{
+  background-color: rgba(150, 112, 106, 0.80);
+}
+.circuit12-head:hover{
+  background-color: rgba(87, 92, 85, 0.553);
+}
+
+/*  */
+
+.circuit13{
+  background-color: rgba(255, 166, 0, 0.75);
+}
+.circuit13:hover{
+  background-color: rgba(255, 166, 0, 0.658);
+}
+.circuit13-head{
+  background-color: rgba(255, 166, 0, 0.80);
+}
+.circuit13-head:hover{
+  background-color: rgba(255, 166, 0, 0.253);
+}
+/*  */
+.circuit14{
+  background-color: rgba(245, 45, 45, 0.75);
+}
+.circuit14:hover{
+  background-color: rgba(255, 0, 0, 0.253);
+}
+.circuit14-head{
+  background-color: rgba(245, 45, 45, 0.80);
+}
+.circuit14-head:hover{
+  background-color: rgba(255, 0, 0, 0.253);
+}
+/*  */
+.circuit15{
+background-color: rgba(45, 245, 202, 0.75);
+}
+.circuit15:hover{
+background-color: rgba(45, 245, 202, 0.253);
+}
+.circuit15-head{
+  background-color: rgba(45, 245, 202, 0.80);
+}
+.circuit15-head:hover{
+  background-color: rgba(45, 245, 202, 0.253);
+}
+/*  */
+.circuit16{
+background-color: rgba(134, 255, 140, 0.75);
+}
+.circuit16:hover{
+background-color: rgba(173, 248, 163, 0.253);
+}
+.circuit16-head{
+  background-color: rgba(134, 255, 140, 0.80);
+}
+.circuit16-head:hover{
+  background-color: rgba(173, 248, 163, 0.253);
+}
+/*  */
+.circuit17{
+background-color: rgba(45, 108, 245, 0.75);
+}
+.circuit17:hover{
+background-color: rgba(45, 138, 245, 0.253);
+}
+.circuit17-head{
+  background-color: rgba(45, 108, 245, 0.80);
+}
+.circuit17-head:hover{
+  background-color: rgba(45, 138, 245, 0.253);
+}
+/*  */
+.circuit18{
+background-color: rgba(198, 45, 245, 0.75);
+}
+.circuit18:hover{
+background-color: rgba(182, 45, 245, 0.253);
+}
+.circuit18-head{
+  background-color: rgba(198, 45, 245, 0.80);
+}
+.circuit18-head:hover{
+  background-color: rgba(182, 45, 245, 0.253);
+}
+/*  */
+.circuit19{
+background-color: rgba(245, 45, 105, 0.75);
+}
+.circuit19:hover{
+background-color: rgba(245, 45, 128, 0.253);
+}
+.circuit19-head{
+  background-color: rgba(245, 45, 105, 0.80);
+}
+.circuit19-head:hover{
+  background-color: rgba(245, 45, 128, 0.253);
+}
+/*  */
+.circuit20{
+background-color: rgba(45, 245, 128, 0.75);
+}
+.circuit20:hover{
+background-color: rgba(45, 245, 162, 0.253);
+}
+.circuit20-head{
+  background-color: rgba(45, 245, 128, 0.80);
+}
+.circuit20-head:hover{
+  background-color: rgba(45, 245, 162, 0.253);
+}
+/*  */
+.circuit21{
+background-color: rgba(45, 58, 245, 0.75);
+}
+.circuit21:hover{
+background-color: rgba(45, 65, 245, 0.453);
+}
+.circuit21-head{
+  background-color: rgba(45, 58, 245, 0.80);
+}
+.circuit21-head:hover{
+  background-color: rgba(45, 65, 245, 0.453);
+}
+/*  */
+.circuit22{
+background-color: rgba(217, 255, 0, 0.75);
+}
+.circuit22:hover{
+background-color: rgba(208, 245, 45, 0.553);
+}
+.circuit22-head{
+  background-color: rgba(217, 255, 0, 0.80);
+}
+.circuit22-head:hover{
+  background-color: rgba(208, 245, 45, 0.553);
+}
+/*  */
+.circuit23{
+background-color: rgba(81, 255, 0, 0.75);
+}
+.circuit23:hover{
+background-color: rgba(78, 245, 45, 0.553);
+}
+.circuit23-head{
+  background-color: rgba(81, 255, 0, 0.80);
+}
+.circuit23-head:hover{
+  background-color: rgba(78, 245, 45, 0.553);
+}
+/*  */
+.circuit24{
+background-color: rgba(108, 112, 106, 0.75);
+}
+.circuit24:hover{
+background-color: rgba(87, 92, 85, 0.553);
+}
+.circuit24-head{
+  background-color: rgba(108, 112, 106, 0.80);
+}
+.circuit24-head:hover{
+  background-color: rgba(87, 92, 85, 0.553);
+}
+
+/*  */
+
+</style>
+</head>
+
+<!-- MAIN BODY OF THE WEBSITE -->
+<body>
+
+<div class="navbar">
+  <a href=index.html>HOME</a>
+  <div class="subnav">
+    <button class="subnavbtn">PORTFOLIO <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=career.html>CAREER</a>
+      <a href=team.html>TEAM</a>
+      <a href=about.html>ABOUT</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">RACING <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=circuits.html>CIRCUITS</a>
+      <a href=videography.html>VIDEOGRAPHY</a>
+      <a href=gallery.html>GALLERY</a>
+    </div>
+  </div> 
+
+
+  <div class="subnav2">
+    <button class="subnavbtn">ELVNDOT <i class="fa fa-caret-down"></i></button>
+  </div> 
+
+  <div class="subnav">
+    <button class="subnavbtn">PARTNERS<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=mclaren.html>MCLAREN</a>
+      <a href=cisco.html>CISCO</a>
+      <a href=elvn.html>ELVN</a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:0 16px">
+
+  <!-- <img class="Biancaimg" src="img/mclaren-F1-Australia-2020-02.jpg" alt="Bianca BG" style="width:100%"> -->
+  <h1>Race Circuits</h1>
+
+
+<div class="table-div">
+
+  <table class="table01">
+
+    <tr class="circuit-head">
+      <th><h2>Circuit</h2></th>
+      <th><h2>Venue</h2></th>
+      <th><h2>Country</h2></th>
+      <th><h2>Laps</h2></th>
+      <th><h2>Distance</h2></th>
+    </tr>
+
+    <!-- Circuit 1 -->
+    <tr class="circuit1">
+      <td class="circuit1-head"><h3>Autodromo Enzo e Dino Ferrari</h3></td>
+      <td class="circuit1-head"><p>Italian (Emilia Romagna) Grand Prix</p></td>
+      <td class="circuit1-head"><p>Italy</p></td>
+      <td class="circuit1-head"><p>63 Laps</p></td>
+      <td class="circuit1-head"><p>4.909 km</p></td>
+    </tr>
+
+    <!-- Circuit 2 -->
+    <tr class="circuit2">
+      <td class="circuit2-head"><h3>Autodromo Hermanos Rodriquez</h3></td>
+      <td class="circuit2-head"><p>Mexican Grand Prix</p></td>
+      <td class="circuit2-head"><p>Mexico</p></td>
+      <td class="circuit2-head"><p>71 Laps</p></td>
+      <td class="circuit2-head"><p>4.304 km</p></td>
+    </tr>
+
+    <!-- Circuit 3 -->
+    <tr class="circuit3">
+      <td class="circuit3-head"><h3>Autodromo Jose Carlos Pace</h3></td>
+      <td class="circuit3-head"><p>Brazilian Grand Prix</p></td>
+      <td class="circuit3-head"><p>Brazil</p></td>
+      <td class="circuit3-head"><p>71 Laps</p></td>
+      <td class="circuit3-head"><p>4.309 km</p></td>
+    </tr>
+
+    <!-- Circuit 4 -->
+    <tr class="circuit4">
+      <td class="circuit4-head"><h3>Autodromo Nazionale Monza</h3></td>
+      <td class="circuit4-head"><p>Italian Grand Prix</p></td>
+      <td class="circuit4-head"><p>Italy</p></td>
+      <td class="circuit4-head"><p>53 Laps</p></td>
+      <td class="circuit4-head"><p>5.793 km</p></td>
+    </tr>
+
+        <!-- Circuit 5 -->
+    <tr class="circuit5">
+      <td class="circuit5-head"><h3>Bahrain International Circuit</h3></td>
+      <td class="circuit5-head"><p>Bahrain Grand Prix</p></td>
+      <td class="circuit5-head"><p>Bahrain</p></td>
+      <td class="circuit5-head"><p>57 Laps</p></td>
+      <td class="circuit5-head"><p>5.412 km</p></td>
+    </tr>
+
+        <!-- Circuit 6 -->
+    <tr class="circuit6">
+      <td class="circuit6-head"><h3>Baku City Circuit</h3></td>
+      <td class="circuit6-head"><p>Azerbaijan Grand Prix</p></td>
+      <td class="circuit6-head"><p>Azerbaijan</p></td>
+      <td class="circuit6-head"><p>51 Laps</p></td>
+      <td class="circuit6-head"><p>6.006 km</p></td>
+    </tr>
+
+        <!-- Circuit 7 -->
+    <tr class="circuit7">
+      <td class="circuit7-head"><h3>Circuit de Barcelona Catalunya</h3></td>
+      <td class="circuit7-head"><p>Spanish Grand Prix</p></td>
+      <td class="circuit7-head"><p>Spain</p></td>
+      <td class="circuit7-head"><p>66 Laps</p></td>
+      <td class="circuit7-head"><p>4.657 km</p></td>
+    </tr>
+
+        <!-- Circuit 8 -->
+    <tr class="circuit8">
+      <td class="circuit8-head"><h3>Circuit de Monaco</h3></td>
+      <td class="circuit8-head"><p>Monaco Grand Prix</p></td>
+      <td class="circuit8-head"><p>France</p></td>
+      <td class="circuit8-head"><p>77 Laps</p></td>
+      <td class="circuit8-head"><p>3.337 km</p></td>
+    </tr>
+
+            <!-- Circuit 9 -->
+    <tr class="circuit9">
+      <td class="circuit9-head"><h3>Circuit de Spa-Franchorchamps</h3></td>
+      <td class="circuit9-head"><p>Belgian Grand Prix</p></td>
+      <td class="circuit9-head"><p>Belgium</p></td>
+      <td class="circuit9-head"><p>44 Laps</p></td>
+      <td class="circuit9-head"><p>7.004 km</p></td>
+    </tr>
+
+            <!-- Circuit 10 -->
+    <tr class="circuit10">
+      <td class="circuit10-head"><h3>Circuit Gilles-Villenueve</h3></td>
+      <td class="circuit10-head"><p>Canadian Grand Prix</p></td>
+      <td class="circuit10-head"><p>Canada</p></td>
+      <td class="circuit10-head"><p>70 Laps</p></td>
+      <td class="circuit10-head"><p>4.361 km</p></td>
+    </tr>
+
+            <!-- Circuit 11 -->
+    <tr class="circuit11">
+      <td class="circuit11-head"><h3>Circuit of The Americas</h3></td>
+      <td class="circuit11-head"><p>United States Grand Prix</p></td>
+      <td class="circuit11-head"><p>United States of America</p></td>
+      <td class="circuit11-head"><p>56 Laps</p></td>
+      <td class="circuit11-head"><p>5.513 km</p></td>
+    </tr>
+
+            <!-- Circuit 12 -->
+    <tr class="circuit12">
+      <td class="circuit12-head"><h3>Circuit Zandvoort</h3></td>
+      <td class="circuit12-head"><p>Netherlands Grand Prix</p></td>
+      <td class="circuit12-head"><p>Netherlands</p></td>
+      <td class="circuit12-head"><p>72 Laps</p></td>
+      <td class="circuit12-head"><p>4.256 km</p></td>
+    </tr>
+
+            <!-- Circuit 13 -->
+    <tr class="circuit13">
+      <td class="circuit13-head"><h3>Hungaroring</h3></td>
+      <td class="circuit13-head"><p>Hungarian Grand Prix</p></td>
+      <td class="circuit13-head"><p>Hungary</p></td>
+      <td class="circuit13-head"><p>70 Laps</p></td>
+      <td class="circuit13-head"><p>4.381 km</p></td>
+    </tr>
+
+            <!-- Circuit 14 -->
+    <tr class="circuit14">
+      <td class="circuit14-head"><h3>Jedah Street Circuit</h3></td>
+      <td class="circuit14-head"><p>Saudi Arabian Grand Prix</p></td>
+      <td class="circuit14-head"><p>Saudi Arabia</p></td>
+      <td class="circuit14-head"><p>50 Laps</p></td>
+      <td class="circuit14-head"><p>6.174 km</p></td>
+    </tr>
+
+            <!-- Circuit 15 -->
+    <tr class="circuit15">
+      <td class="circuit15-head"><h3>Las Vegas Street Circuit</h3></td>
+      <td class="circuit15-head"><p>Las Vegas Grand Prix</p></td>
+      <td class="circuit15-head"><p>United States</p></td>
+      <td class="circuit15-head"><p>50 Laps</p></td>
+      <td class="circuit15-head"><p>6.201 km</p></td>
+    </tr>
+
+            <!-- Circuit 16 -->
+    <tr class="circuit16">
+      <td class="circuit16-head"><h3>Losail International Circuit</h3></td>
+      <td class="circuit16-head"><p>Qatar Grand Prix</p></td>
+      <td class="circuit16-head"><p>Barcelona</p></td>
+      <td class="circuit16-head"><p>57 Laps</p></td>
+      <td class="circuit16-head"><p>5.419 km</p></td>
+    </tr>
+
+            <!-- Circuit 17 -->
+    <tr class="circuit17">
+      <td class="circuit17-head"><h3>Marina Bay Street Circuit</h3></td>
+      <td class="circuit17-head"><p>Singapore Grand Prix</p></td>
+      <td class="circuit17-head"><p>Singapore</p></td>
+      <td class="circuit17-head"><p>61 Laps</p></td>
+      <td class="circuit17-head"><p>4.940 km</p></td>
+    </tr>
+
+            <!-- Circuit 18 -->
+    <tr class="circuit18">
+      <td class="circuit18-head"><h3>Melbourne Grand Prix Circuit</h3></td>
+      <td class="circuit18-head"><p>Australian Grand Prix</p></td>
+      <td class="circuit18-head"><p>Australia</p></td>
+      <td class="circuit18-head"><p>58 Laps</p></td>
+      <td class="circuit18-head"><p>5.278 km</p></td>
+    </tr>
+
+            <!-- Circuit 19 -->
+    <tr class="circuit19">
+      <td class="circuit19-head"><h3>Miami International Autodrome</h3></td>
+      <td class="circuit19-head"><p>Miami Grand Prix</p></td>
+      <td class="circuit19-head"><p>United States of America</p></td>
+      <td class="circuit19-head"><p>57 Laps</p></td>
+      <td class="circuit19-head"><p>5.412 km</p></td>
+    </tr>
+
+            <!-- Circuit 20 -->
+    <tr class="circuit20">
+      <td class="circuit20-head"><h3>Red Bull Ring</h3></td>
+      <td class="circuit20-head"><p>Austrian Grand Prix</p></td>
+      <td class="circuit20-head"><p>Austria</p></td>
+      <td class="circuit20-head"><p>71 Laps</p></td>
+      <td class="circuit20-head"><p>4.318 km</p></td>
+    </tr>
+
+            <!-- Circuit 21 -->
+    <tr class="circuit21">
+      <td class="circuit21-head"><h3>Shanghai International</h3></td>
+      <td class="circuit21-head"><p>Chinese Grand Prix</p></td>
+      <td class="circuit21-head"><p>China</p></td>
+      <td class="circuit21-head"><p>56 Laps</p></td>
+      <td class="circuit21-head"><p>5.451 km</p></td>
+    </tr>
+
+            <!-- Circuit 22 -->
+    <tr class="circuit22">
+      <td class="circuit22-head"><h3>Silverstone Circuit</h3></td>
+      <td class="circuit22-head"><p>British Grand Prix</p></td>
+      <td class="circuit22-head"><p>United Kingdom</p></td>
+      <td class="circuit22-head"><p>52 Laps</p></td>
+      <td class="circuit22-head"><p>5.891 km</p></td>
+    </tr>
+
+            <!-- Circuit 23 -->
+    <tr class="circuit23">
+      <td class="circuit23-head"><h3>Suzuka International Racing Course</h3></td>
+      <td class="circuit23-head"><p>Japanese Grand Prix</p></td>
+      <td class="circuit23-head"><p>Japan</p></td>
+      <td class="circuit23-head"><p>53 Laps</p></td>
+      <td class="circuit23-head"><p>5.807 km</p></td>
+    </tr>
+
+            <!-- Circuit 24 -->
+    <tr class="circuit24">
+      <td class="circuit24-head"><h3>Yas Marina Circuit</h3></td>
+      <td class="circuit24-head"><p>Abu Dhabi Grand Prix</p></td>
+      <td class="circuit24-head"><p>United Arab Emirates </p></td>
+      <td class="circuit24-head"><p>58 Laps</p></td>
+      <td class="circuit24-head"><p>5.281 km</p></td>
+    </tr>
+
+
+  </table>
+</div>
+
+
+  <p>16.</p>
+  
+       
+</div>
+
+</body>
+</html>
+

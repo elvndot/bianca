@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Videography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+  /* CSS */
+
+  /* MOBILE */
+  @media only screen and (min-width: 250px){
+  h1{
+    font-size: 50px;
+  }
+  iframe{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 500px){
+  h1{
+    font-size: 50px;
+  }
+  iframe{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 720px){
+  h1{
+    font-size: 5em;
+  }
+  iframe{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+
+  /*  */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+  background-color: rgb(255, 102, 0);
+  transition: 2s;
+}
+body:hover{
+  background-color: rgb(255, 128, 0);
+  transition: 2s;
+}
+
+h1{
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #ff6600; 
+  padding: 20px;
+  transition: 1s;
+}
+.navbar:hover {
+  overflow: hidden;
+  background-color: #0c62c4a8; 
+  padding: 40px;
+  transition: 1s;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* SECOND SECTION */
+.subnav2 {
+  float: right;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.subnav2 .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: 0.5s;
+}
+
+.subnav2 .subnavbtn:hover {
+  color: white;
+  padding: 15px 25px;
+
+  margin: 0;
+  transition: 0.5s;
+}
+
+/*  */
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: orange;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: 0.5s;
+}
+
+.subnav .subnavbtn:hover {
+  color: white;
+  padding: 15px 25px;
+
+  margin: 0;
+  transition: 0.5s;
+}
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(255, 123, 0);
+  border-radius: 2.5px;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(255, 123, 0);
+  border-radius: 2.5px;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+.Biancaimg{
+padding: 20px;
+transition: 1s;
+border: #eee;
+border-width: 50px;
+}
+.Biancaimg:hover{
+  opacity: 80%;
+  transition: 1s;
+  border-width: 50px;
+  padding-top: 40px;
+}
+
+.v1{
+padding: 20px;
+transition: 1s;
+
+}
+.v1:hover{
+  opacity: 80%;
+  transition: 1s;
+  padding-top: 40px;
+}
+
+.v2{
+padding: 20px;
+transition: 1s;
+
+}
+.v2:hover{
+  opacity: 80%;
+  transition: 1s;
+  padding-top: 40px;
+}
+
+.v3{
+padding: 20px;
+transition: 1s;
+
+}
+.v3:hover{
+  opacity: 80%;
+  transition: 1s;
+  padding-top: 40px;
+}
+
+.subvideos{
+padding: 20px;
+transition: 1s;
+
+}
+.subvideos:hover{
+  opacity: 80%;
+  transition: 1s;
+  padding-top: 40px;
+}
+
+
+/*  */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.container {
+  color: #e5e5e5;
+  font-size: 2em;
+  text-transform: uppercase;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+.container:hover{
+  color: #e5e5e5;
+  font-size: 2em;
+  color: #ff7b00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1.5em;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+/* 
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+} */
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+</style>
+</style>
+</head>
+
+<!-- MAIN BODY OF THE WEBSITE -->
+<body>
+
+<div class="navbar">
+  <a href=index.html>HOME</a>
+  <div class="subnav">
+    <button class="subnavbtn">PORTFOLIO <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=career.html>CAREER</a>
+      <a href=team.html>TEAM</a>
+      <a href=about.html>ABOUT</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">RACING <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=circuits.html>CIRCUITS</a>
+      <a href=videography.html>VIDEOGRAPHY</a>
+      <a href=gallery.html>GALLERY</a>
+    </div>
+  </div> 
+
+
+  <div class="subnav2">
+    <button class="subnavbtn">ELVNDOT <i class="fa fa-caret-down"></i></button>
+  </div> 
+
+  <div class="subnav">
+    <button class="subnavbtn">PARTNERS<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=mclaren.html>MCLAREN</a>
+      <a href=cisco.html>CISCO</a>
+      <a href=elvn.html>ELVN</a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:0 16px">
+
+  <!-- <img class="Biancaimg" src="img/f1academy.jpg" alt="Bianca BG" style=width:50%; > -->
+
+  <!-- <h1 style="font-size: 10em;">Videos</h1> -->
+
+<!--  -->
+
+
+<main class="container">
+  <h1>Hello </h1>
+
+  <section class="animation">
+    <div class="first">
+      <div>Bianca</div>
+        </div>
+    <div class="second">
+      <div>Racerbia</div>
+        </div>
+    <div class="third">
+      <div>Bustamante</div>
+        </div>
+  </section>
+</main>
+
+<!--  -->
+<div class="v3">
+  <iframe width="1020" height="620" src="https://www.youtube.com/embed/_Um2gkGtYyw?si=lv6g0ymVKyABAfJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="v1">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/arjXKcFMrVY?si=jXkqrsqlUtgEAO-2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/K0wsCS0kalk?si=JLjpTvq547zW8CBB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+  <div class="subvideos">
+
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/pa1FwfNd4HE?si=Xb7lQu-wTJM9Td0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/QsWD6FC8KO0?si=3XAuRTTfYbWqvNcJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/T96TuxEX410?si=RP9IfrrNTgBFnd_N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+
+  <br>
+  <p>16.</p>
+  <br><br><br><br>
+        
+</div>
+
+</body>
+</html>
+
